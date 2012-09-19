@@ -1,0 +1,7 @@
+.container
+  .hero-unit
+    .row
+      .span8.offset2
+        = form_tag search_path, class: 'form-inline' do
+          = text_field_tag :code, '', class: 'span5'
+          = submit_tag '画面いっぱいにプリントする', class: 'btn btn-primary span3'
