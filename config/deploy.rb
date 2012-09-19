@@ -4,11 +4,17 @@ require "bundler/capistrano"
 set :application, "printer"
 set :repository,  "git://github.com/takuyan/printer.git"
 set :scm, :git
+set :branch, 'master'
 set :use_sudo, false
 set :default_run_options, pty: true
 set :user, "takuyan"
 set :bundle_flags, "--quiet"
 set :deploy_via, :copy
+
+role :web, "printer.takuyan.com"
+role :app, "printer.takuyan.com"
+role :db,  "printer.takuyan.com", primary: true
+set :deploy_to, "/home/takuyan/rails/printer"
 
 #
 # rbenv configuration

@@ -16,7 +16,6 @@
     %link(href="images/apple-touch-icon.png" rel="apple-touch-icon-precomposed")
     %link(href="images/favicon.ico" rel="shortcut icon")
 
-
   %body
     .navbar.navbar-fixed-top
       .navbar-inner
@@ -26,18 +25,16 @@
           = form_tag search_path, class: 'navbar-form pull-right' do
             = text_field_tag :code, @code
             = submit_tag 'みる', class: 'btn btn-primary'
-
     = yield
-    -#.container
-
-      .content
-        = bootstrap_flash
-        = yield
-
-      -#%footer
-        %p &copy; Company 2012
-    /
-      Javascripts
-      \==================================================
-    / Placed at the end of the document so the pages load faster
     = javascript_include_tag "application"
+    :javascript
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-30952501-3']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
