@@ -3,5 +3,8 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $('#container').masonry
-    itemSelector : '.item'
-    columnWidth : 60
+  itemSelector : '.item'
+  columnWidth : 60
+
+$(".nav-collapse").collapse
+

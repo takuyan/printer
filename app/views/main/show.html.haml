@@ -2,9 +2,11 @@
   - 100.times do
     %h1.item
       = @arr.sample
-    %h2.item
-      = @arr.sample
-    %h3.item
-      = @arr.sample
+    - 3.times do
+      %h2.item
+        = @arr.sample
+    - 5.times do
+      %h3.item
+        = @arr.sample
 
 

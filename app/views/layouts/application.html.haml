@@ -16,15 +16,20 @@
     %link(href="images/apple-touch-icon.png" rel="apple-touch-icon-precomposed")
     %link(href="images/favicon.ico" rel="shortcut icon")
 
-  %body
+  %body{class: "#{controller_name}_#{action_name}"}
     .navbar.navbar-fixed-top
       .navbar-inner
         .container
           = link_to root_path, class: 'brand' do
             Printer
-          = form_tag search_path, class: 'navbar-form pull-right' do
-            = text_field_tag :code, @code
-            = submit_tag 'みる', class: 'btn btn-primary'
+          %a.btn.btn-navbar.collapsed{data: {toggle: "collapse", target: ".nav-collapse"}}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          .nav-collapse.in
+            = form_tag search_path, class: 'navbar-form pull-right' do
+              = text_field_tag :code, '', placeholder: @code
+              = submit_tag 'Display', class: 'btn'
     = yield
     = javascript_include_tag "application"
     :javascript
