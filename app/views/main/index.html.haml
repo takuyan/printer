@@ -1,9 +1,10 @@
 .container
   .row
     %h1
-      Printer
+      %i.icon-camera-retro
+      Good Char Viewer
     .span8.offset2
-      = form_tag search_path, class: 'form-inline' do
-        = text_field_tag :code, '', class: 'span5'
+      = form_tag search_path, class: 'input-append' do
+        = text_field_tag :code, '', class: 'span5', placeholder: '文字を入力して下さい。'
         = submit_tag 'Display', class: 'btn span3'
 

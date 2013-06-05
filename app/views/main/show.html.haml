@@ -1,5 +1,5 @@
 #container
-  - 100.times do
+  - 50.times do
     %h1.item
       = @arr.sample
     - 3.times do
@@ -8,5 +8,7 @@
     - 5.times do
       %h3.item
         = @arr.sample
-
+.container
+  %h1#title
+    = @arr.join
 

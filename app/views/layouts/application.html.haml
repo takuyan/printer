@@ -1,5 +1,5 @@
-!!! 5
-%html(lang="en")
+!!!
+%html(lang="ja")
   %head
     %meta(charset="utf-8")
     %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
@@ -10,10 +10,6 @@
     /[if lt IE 9]
       = javascript_include_tag "http://html5shim.googlecode.com/svn/trunk/html5.js"
     = stylesheet_link_tag "application", media: "all"
-    %link(href="images/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144")
-    %link(href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114")
-    %link(href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72")
-    %link(href="images/apple-touch-icon.png" rel="apple-touch-icon-precomposed")
     %link(href="images/favicon.ico" rel="shortcut icon")
 
   %body{class: "#{controller_name}_#{action_name}"}
@@ -21,7 +17,8 @@
       .navbar-inner
         .container
           = link_to root_path, class: 'brand' do
-            Printer
+            %i.icon-camera
+            Good Char Viewer
           %a.btn.btn-navbar.collapsed{data: {toggle: "collapse", target: ".nav-collapse"}}
             %span.icon-bar
             %span.icon-bar
@@ -42,4 +39,5 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+    %script{src: "http://typesquare.com/accessor/script/typesquare.js?8uMWCazeqlU%3D"}
 
