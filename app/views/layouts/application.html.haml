@@ -24,6 +24,15 @@
             %span.icon-bar
             %span.icon-bar
           .nav-collapse.in
+            %ul.nav
+              %li
+                = link_to "http://www.takuyan.com" do
+                  %i.icon-user
+                  Author
+              %li
+                = link_to "https://twitter.com/katton" do
+                  %i.icon-twitter-sign
+                  Twitter
             = form_tag search_path, class: 'navbar-form pull-right' do
               = text_field_tag :code, '', placeholder: @code
               = submit_tag 'Display', class: 'btn'
